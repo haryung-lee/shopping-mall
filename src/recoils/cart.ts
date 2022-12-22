@@ -1,7 +1,7 @@
 import { atom, selectorFamily, useRecoilValue } from "recoil";
 
 const cartState = atom<Map<string, number>>({
-  key: "carState",
+  key: "cartState",
   default: new Map(),
 });
 

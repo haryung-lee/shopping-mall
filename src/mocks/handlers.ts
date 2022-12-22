@@ -35,7 +35,6 @@ export const handlers = [
     const newData = { ...cartData };
     const id = req.variables?.id;
     if (newData[id]) {
-      console.log("?? new Data[id]", newData[id]);
       newData[id] = {
         ...newData[id],
         amount: (newData[id].amount || 0) + 1,
@@ -50,6 +49,7 @@ export const handlers = [
       }
     }
     cartData = newData;
+    console.log("?? cartData", cartData);
     return res(ctx.data(newData));
   }),
 ];

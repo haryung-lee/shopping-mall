@@ -24,5 +24,6 @@ export const GET_CART = gql`
     imageUrl: string
     price: number
     title: string
+    amount: number
   }
 `;
