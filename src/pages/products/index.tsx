@@ -10,9 +10,9 @@ const ProductList = () => {
   );
 
   return (
-    <div>
+    <div className="products">
       <h2>상품목록</h2>
-      <ul className="products">
+      <ul>
         {data?.products?.map((product) => (
           <ProductItem {...product} key={product.id} />
         ))}
