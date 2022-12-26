@@ -1,5 +1,6 @@
 @import "products";
 @import "cart";
+@import "payment";
 
 * {
   margin: 0;
@@ -10,6 +11,40 @@ ul,
 li {
   list-style: none;
   text-decoration: none;
+}
+
+#modal .modal {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  .modal__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    padding: 2rem;
+    width: 80%;
+    max-width: 20rem;
+    transform: translate(-50%, -50%);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &.show {
+    display: block;
+  }
 }
 
 .gnb {

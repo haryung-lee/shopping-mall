@@ -1,3 +1,4 @@
+import { EXECUTE_PAY } from "./../graphql/payment";
 import { CartType, DELETE_CART, UPDATE_CART } from "./../graphql/cart";
 import { graphql } from "msw";
 import { v4 as uuid } from "uuid";
@@ -64,5 +65,9 @@ export const handlers = [
     delete newData[id];
     cartData = newData;
     return res(ctx.data(id));
+  }),
+  graphql.mutation(EXECUTE_PAY, ({ variables }, res, ctx) => {
+    console.log(variables);
+    return res();
   }),
 ];
